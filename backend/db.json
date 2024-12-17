@@ -1,0 +1,68 @@
+{
+  "menus": [
+    {
+      "id": "2b32",
+      "title": "housin",
+      "description": "hasouinaaaa",
+      "approuved": true,
+      "mark": 4.5,
+      "reservations": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "226c",
+      "title": "kafteji",
+      "description": "kafteji the king ",
+      "approuved": false,
+      "mark": 2.75,
+      "reservations": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "ea35",
+      "title": "kafteji",
+      "description": "kafteji the king ",
+      "approuved": false,
+      "mark": 0,
+      "reservations": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "a996",
+      "title": "pizza",
+      "description": "iszchiuzehiluzahfuhazfhazFHMAZfdz",
+      "approuved": false,
+      "mark": 2.5,
+      "reservations": [
+        1,
+        1
+      ]
+    },
+    {
+      "description": "ffffff",
+      "title": "ccccccccccccccccccc",
+      "approuved": false,
+      "mark": 0,
+      "reservations": [],
+      "id": "Vcf45IC"
+    },
+    {
+      "description": "houssine",
+      "title": "houssineee",
+      "approuved": false,
+      "mark": 0,
+      "reservations": [],
+      "id": "atJI2NI"
+    }
+  ]
+}

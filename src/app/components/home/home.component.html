@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-4" *ngFor="let m of listMenus">
+       <div *ngIf="m.approuved">
+
+
+
+
+
+
+
+        <div class="row">
+          <div class="col-md-4" *ngFor="let m of listMenus">
+            <div *ngIf="m.approuved">
+              <div class="card" style="width: 18rem;">
+                <img src="../../assets/shirt.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{m.title}}</h5>
+                  <a [routerLink]="['/menu/details', m.id]">Details</a>
+                  <button (click)="reserve(m)">Reserve</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+    </div>
+  </div>
