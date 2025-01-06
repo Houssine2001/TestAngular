@@ -1,2 +1,3 @@
 ng generate module Reservation --routing
 ng generate module Menu --routing
+ng generate guard authentification

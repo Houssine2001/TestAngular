@@ -64,5 +64,13 @@
       "reservations": [],
       "id": "atJI2NI"
     }
+  ],
+  "annonces": [
+    {
+      "id": 1,
+      "title": "Appartement Moderne",
+      "price": 200600,
+      "residenceId": 1
+    }
   ]
 }

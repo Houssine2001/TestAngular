@@ -1,0 +1,77 @@
+<div class="row">
+    <div class="col-md-4" *ngFor="let annonce of annonces">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{ annonce.title }}</h5>
+          <p class="card-text">Prix: {{ annonce.price }} € -- Résidence: {{ annonce.residenceId }}</p>
+          <button class="btn btn-warning" (click)="deleteAnnonce(annonce.id)">Supprimer</button>
+          <button class="btn btn-success" (click)="editAnnonce(annonce)">Modifier</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <h1>Formulaire des Annonces</h1>
+  <form #annonceForm="ngForm">
+    <!-- Champ Titre -->
+    <div class="form-group">
+      <label for="title">Titre: </label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        class="form-control"
+        [(ngModel)]="newAnnonce.title"
+        #title="ngModel"
+        required
+        minlength="3"
+      />
+      <div *ngIf="title.invalid && title.touched" style="color: red;">
+        <small *ngIf="title.errors?.['required']">Le titre est obligatoire.</small>
+        <small *ngIf="title.errors?.['minlength']">Le titre doit contenir au moins 3 caractères.</small>
+      </div>
+    </div>
+  
+    <!-- Champ Prix -->
+    <div class="form-group">
+      <label for="price">Prix (€): </label>
+      <input
+        type="number"
+        id="price"
+        name="price"
+        class="form-control"
+        [(ngModel)]="newAnnonce.price"
+        #price="ngModel"
+        required
+        min="70000"
+        max="500000"
+      />
+      <div *ngIf="price.invalid && price.touched" style="color: red;">
+        <small *ngIf="price.errors?.['required']">Le prix est obligatoire.</small>
+        <small *ngIf="price.errors?.['min']">Le prix doit être au moins 70 000 €.</small>
+        <small *ngIf="price.errors?.['max']">Le prix ne peut pas dépasser 500 000 €.</small>
+      </div>
+    </div>
+  
+    <!-- Champ Résidence -->
+    <div class="form-group">
+      <label for="residenceId">Résidence ID: </label>
+      <input
+        type="number"
+        id="residenceId"
+        name="residenceId"
+        class="form-control"
+        [(ngModel)]="newAnnonce.residenceId"
+        #residenceId="ngModel"
+        required
+      />
+      <div *ngIf="residenceId.invalid && residenceId.touched" style="color: red;">
+        <small *ngIf="residenceId.errors?.['required']">Le Résidence ID est obligatoire.</small>
+      </div>
+    </div>
+  
+    <!-- Boutons -->
+    <button class="btn btn-primary" (click)="save()" [disabled]="annonceForm.invalid">Ajouter</button>
+    <button class="btn btn-success" (click)="updateAnnonce()" [disabled]="annonceForm.invalid">Mettre à jour</button>
+  </form>
+  

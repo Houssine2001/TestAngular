@@ -11,13 +11,14 @@ import { MenuComponent } from './components/menu/menu.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { AnnoncesComponent } from './components/annonces/annonces.component';
 
 
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-
+  {path: 'annonces', component: AnnoncesComponent},
   {
     path: 'reservation',
     loadChildren: () =>
@@ -42,7 +43,8 @@ const routes: Routes = [
     HomeComponent,
     FooterComponent,
     NotFoundComponent,
-    MenuComponent
+    MenuComponent,
+    AnnoncesComponent
     
   ],
   imports: [
